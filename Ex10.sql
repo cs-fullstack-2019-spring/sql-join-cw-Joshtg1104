@@ -1,1 +1,2 @@
--- SQL
+-- Show the average each person pays for rent each year.-- SQL
+select people.name, avg(address.rent) as avg_rent from address join people on people.id=address.id group by people.name order by avg_rent desc;

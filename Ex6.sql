@@ -1,1 +1,2 @@
--- SQL
+-- Show the maximum amount each person spent on rent.-- SQL
+select max(address.rent) as max_rent, people.name from address inner join people on address.id=people.id group by people.name order by max_rent desc;

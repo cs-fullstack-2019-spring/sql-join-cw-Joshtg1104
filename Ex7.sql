@@ -1,1 +1,2 @@
--- SQL
+-- Show the number of times each person moved.-- SQL
+select count(address.updatedate) as move_count, people.name from address join people on address.id=people.id group by people.name order by move_count desc;

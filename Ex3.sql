@@ -1,1 +1,2 @@
--- SQL
+-- Show address information for each person, but ONLY keep the LATEST address information for each person.-- SQL
+select people.name, max(address.updatedate) as recentAddress, address.rent from address join people on address.id = people.id group by people.name, address.rent, address.updatedate order by updatedate desc limit 5;

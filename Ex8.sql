@@ -1,1 +1,2 @@
--- SQL
+-- Show which people paid rent that cost between 1200 and 3000. Do no include duplicates.-- SQL
+select distinct people.name, address.rent from people join address on people.id=address.id where rent between 1200 and 3000 limit 2;
